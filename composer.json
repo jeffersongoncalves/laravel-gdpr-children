@@ -1,0 +1,71 @@
+{
+    "name": "jeffersongoncalves/laravel-gdpr-children",
+    "description": "GDPR children's consent for Laravel (Art. 8): age checks stored as results only, the digital consent age per member state (13-16), parental authorisation through verified guardian links, and no ad profiling for minors.",
+    "keywords": [
+        "laravel",
+        "gdpr",
+        "children",
+        "age-verification",
+        "parental-consent",
+        "digital-age-of-consent",
+        "privacy"
+    ],
+    "homepage": "https://github.com/jeffersongoncalves/laravel-gdpr-children",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jefferson Simão Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "spatie/laravel-package-tools": "^1.16",
+        "illuminate/contracts": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.24",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\GdprChildren\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\GdprChildren\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\GdprChildren\\GdprChildrenServiceProvider"
+            ],
+            "aliases": {
+                "GdprChildren": "JeffersonGoncalves\\GdprChildren\\Facades\\GdprChildren"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

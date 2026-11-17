@@ -1,6 +1,6 @@
 {
     "name": "jeffersongoncalves/laravel-gdpr-children",
-    "description": "GDPR children's consent for Laravel (Art. 8): age checks stored as results only, the digital consent age per member state (13-16), parental authorisation through verified guardian links, and no ad profiling for minors.",
+    "description": "GDPR children's consent for Laravel (Art. 8): age checks stored as results only, the digital consent age per member state (13-16), parental authorisation through verified guardian links, and no ad profiling for children.",
     "keywords": [
         "laravel",
         "gdpr",
@@ -15,17 +15,24 @@
     "type": "library",
     "authors": [
         {
-            "name": "Jefferson Simão Gonçalves",
+            "name": "Jefferson Gonçalves",
             "email": "gerson.simao.92@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^12.0|^13.0"
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/contracts": "^12.0|^13.0",
+        "illuminate/database": "^12.0|^13.0",
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/routing": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "illuminate/view": "^12.0|^13.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
+        "jeffersongoncalves/pest-plugin-database-migrations": "^1.0",
         "larastan/larastan": "^3.0",
         "laravel/pint": "^1.24",
         "orchestra/testbench": "^10.0|^11.0",
